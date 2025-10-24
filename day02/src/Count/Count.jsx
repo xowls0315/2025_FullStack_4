@@ -4,13 +4,37 @@ const Count = ({ num }) => {
     const [count, setCount] = useState(num);
 
     return (
-        <div
-            onClick={() => {
-                setCount((prev) => prev + 1);
-            }}
-        >
-            {count}
-        </div>
+        <>
+            <div>{count}</div>
+            <button
+                onClick={() => {
+                    setCount((prev) => prev - 10);
+                }}
+            >
+                -10
+            </button>
+            <button
+                onClick={() => {
+                    setCount((prev) => prev - 1);
+                }}
+            >
+                -1
+            </button>
+            <button
+                onClick={() => {
+                    setCount((prev) => prev + 1);
+                }}
+            >
+                +1
+            </button>
+            <button
+                onClick={() => {
+                    setCount((prev) => prev + 10);
+                }}
+            >
+                +10
+            </button>
+        </>
     );
 };
 
