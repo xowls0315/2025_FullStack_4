@@ -3,13 +3,8 @@ import ChampName from "../atom/ChampName";
 
 const Champ = ({ image, name, description }) => {
     return (
-        <div
-            className={"p-[5px] flex flex-col items-center"}
-            onClick={() => {
-                alert(`${description}`);
-            }}
-        >
-            <ChampImage image={image} />
+        <div className={"p-[5px] flex flex-col items-center"}>
+            <ChampImage image={image} description={description} />
             <ChampName name={name} />
         </div>
     );
